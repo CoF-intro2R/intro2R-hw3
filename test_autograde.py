@@ -22,6 +22,10 @@ def test_names():
       'vert_index', 'weight_g', 'x', 'y', 'year']
       
     assert expected_names == names
+  
+  else:
+    
+    assert True == False
     
 # check that the salamander and trout data were merged
 def test_rbind():
@@ -34,6 +38,10 @@ def test_rbind():
     
     assert expected_sp == sp
     
+  else:
+    
+    assert True == False
+    
     
 # check that dates were reformated
 def test_dates():
@@ -43,3 +51,7 @@ def test_dates():
     dates = sorted(dat['sample_date'].tolist())
     
     assert dates[1] == '1987-10-06'
+    
+  else:
+    
+    assert True == False
