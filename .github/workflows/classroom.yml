@@ -1,0 +1,22 @@
+name: Autograding
+
+on:
+  push: {}
+
+jobs:
+  test:
+    permissions: write-all
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          python -m pip install pytest pandas
+
+      - name: Run tests
+        run: |
+          python test_autograde.py
+
+      - uses: education/autograding@v1

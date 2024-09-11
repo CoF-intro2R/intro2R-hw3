@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Test directory structure",
+      "run": "pytest test_autograde.py::test_dir_struc",  
+      "timeout": 10,  
+      "points": 1 
+    },
+    {
+      "name": "Test correct column name formatting",
+      "run": "pytest test_autograde.py::test_names",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test that data got combined and that species was formatted",
+      "run": "pytest test_autograde.py::test_rbind",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Test that sample date was reformatted",
+      "run": "pytest test_autograde.py::test_dates",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
